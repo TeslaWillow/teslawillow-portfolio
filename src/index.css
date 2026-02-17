@@ -1,68 +1,41 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@theme {
+  /* Colors inspired by "Dark Veil" & "Naomi Ncube" */
+  --color-brand-dark: #030303;
+  --color-brand-purple: #6b21a8;
+  --color-brand-indigo: #3730a3;
+  --color-brand-orange: #f97316;
+  --color-brand-pink: #db2777;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  /* Typographies */
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+  /* Custom Animations for the Mesh Gradient */
+  @keyframes mesh-float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
   }
-  a:hover {
-    color: #747bff;
+  --animate-mesh: mesh-float 20s ease-in-out infinite;
+}
+
+/* Base Styles */
+@layer base {
+  body {
+    @apply bg-brand-dark font-sans text-white antialiased;
+    margin: 0;
   }
-  button {
-    background-color: #f9f9f9;
+
+  h1, h2, .font-display {
+    @apply font-display;
+  }
+}
+
+/* Glassmorphism Utility (Atomic Design: Atom Level) */
+@layer components {
+  .glass-panel {
+    @apply backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl;
   }
 }
