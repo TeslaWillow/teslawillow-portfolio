@@ -29,7 +29,7 @@ const Typography = ({
     h5: 'text-lg md:text-2xl font-display',
     h6: 'text-base md:text-xl font-display',
     body: 'text-lg md:text-xl font-light text-gray-300 leading-relaxed',
-    caption: 'text-sm uppercase tracking-widest text-gray-500'
+    caption: 'text-sm uppercase tracking-widest text-gray-300'
   };
 
   const Component = variant.startsWith('h') ? variant : 'p';
