@@ -2,6 +2,7 @@ import React from 'react';
 import Typography from '../atoms/Typography';
 import Typewriter from '../atoms/Typewriter';
 import portfolioData from '../../assets/data/portfolio.json';
+import Icon from '../atoms/Icon';
 
 const Hero: React.FC = () => {
   const { roles } = portfolioData.profile;
@@ -26,12 +27,16 @@ const Hero: React.FC = () => {
         in crafting visually stunning and highly performant web applications.
       </Typography>
 
-      <div className="mt-8 flex items-center gap-4 group cursor-pointer w-fit">
-        <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center transition-transform group-hover:scale-110">
-          <span className="rotate-45">→</span>
+      <a href="#projects-section">
+        <div className="mt-8 flex items-center gap-4 group cursor-pointer w-fit">
+          <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center transition-transform group-hover:scale-110">
+            <span className="rotate-45">
+              <Icon name="ArrowBigRight" />
+            </span>
+          </div>
+          <span className="text-xs uppercase tracking-widest font-bold">View Projects</span>
         </div>
-        <a href="#projects-section" className="uppercase text-xs tracking-widest font-bold">View Projects</a>
-      </div>
+      </a>
     </section>
   );
 };

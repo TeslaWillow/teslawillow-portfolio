@@ -1,5 +1,6 @@
 // ./src/components/organisms/Navbar.tsx
 import React, { useState, useEffect } from 'react';
+import Icon from '../atoms/Icon';
 
 /**
  * Navbar Organism
@@ -24,11 +25,11 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'About Me', href: '#about' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    // { name: 'Contact', href: '#contact' },
   ];
 
   return (
-    <nav 
+    <nav
       className={`fixed top-0 w-full z-50 transition-all duration-500 px-6 py-4 md:px-12 
         ${isScrolled ? 'py-3' : 'py-6'}`}
     >
@@ -61,10 +62,13 @@ const Navbar: React.FC = () => {
         </div>
 
         {/* Social Icon (LinkedIn as seen in image) */}
-        <div className="flex items-center">
-           <a href="#" className="text-xl hover:scale-110 transition-transform">
-              <span className="font-bold">in</span>
-           </a>
+        <div className="flex items-center gap-5">
+          <a href="https://github.com/teslawillow" target="_blank">
+            <Icon name="Github" className="hover:text-white transition-colors" />
+          </a>
+          <a href="https://www.linkedin.com/in/hector-caballero-10725b144/?locale=en_US" target="_blank">
+            <Icon name="Linkedin" className="hover:text-blue-400 transition-colors" />
+          </a>
         </div>
       </div>
     </nav>
