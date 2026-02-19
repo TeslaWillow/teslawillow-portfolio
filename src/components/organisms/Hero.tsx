@@ -30,7 +30,7 @@ const Hero: React.FC = () => {
         <div className="w-12 h-12 rounded-full bg-white text-black flex items-center justify-center transition-transform group-hover:scale-110">
           <span className="rotate-45">→</span>
         </div>
-        <span className="uppercase text-xs tracking-widest font-bold">View Projects</span>
+        <a href="#projects-section" className="uppercase text-xs tracking-widest font-bold">View Projects</a>
       </div>
     </section>
   );

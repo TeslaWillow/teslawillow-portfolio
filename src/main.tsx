@@ -10,9 +10,9 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <MainLayout>
       {/* Hero Section */}
-      <div className="min-h-[80vh] flex items-center">
+      <section id="about" className="min-h-[80vh] flex items-center">
         <Hero />
-      </div>
+      </section>
 
       {/* Projects Section */}
       <section id="projects" className="py-10">
