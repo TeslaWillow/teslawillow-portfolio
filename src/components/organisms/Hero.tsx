@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
         HÉCTOR J. CABALLERO - TESLAWILLOW
       </Typography>
 
-      <h1 className="text-6xl md:text-8xl font-display font-bold min-h-[1.2em]">
+      <h1 className="text-4xl sm:text-6xl md:text-8xl font-display font-bold min-h-[1.2em]">
         <Typewriter words={roles} />
       </h1>
 

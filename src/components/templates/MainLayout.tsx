@@ -1,6 +1,7 @@
 import React from 'react';
 import MeshBackground from '../atoms/MeshBackground';
 import Navbar from '../organisms/Navbar';
+import ScrollProgress from '../atoms/ScrollProgress';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -16,12 +17,19 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
 
   return (
     <div className="relative min-h-screen">
+      
+      {/* Background Layer */}
       <MeshBackground />
+      
+      {/* UI Layers */}
+      <ScrollProgress />
       <Navbar />
 
+      {/* Main Content */}
       <main className="relative z-10 pt-32 px-6 md:px-12">
         {children}
       </main>
+
     </div>
   );
 };

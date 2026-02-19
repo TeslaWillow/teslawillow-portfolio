@@ -25,7 +25,6 @@ const ProjectGrid: React.FC = () => {
     fetch('/data/projects.json')
       .then((response) => response.json())
       .then((data) => {
-        console.log("Projects loaded:", data);
         setProjects(data);
         setLoading(false);
       })
@@ -58,7 +57,7 @@ const ProjectGrid: React.FC = () => {
   };
 
   return (
-    <section className="py-20" id="projects-section">
+    <section className="py-5 lg:py-20" id="projects-section">
       <motion.div 
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
         variants={containerVariants}
