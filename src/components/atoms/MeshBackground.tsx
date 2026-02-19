@@ -9,7 +9,7 @@ const MeshBackground: React.FC = () => {
     <div className="fixed inset-0 -z-50 overflow-hidden bg-brand-dark">
       <DarkVeil 
         speed={2} 
-        noiseIntensity={0.05} 
+        noiseIntensity={0.025} 
         hueShift={175}
         warpAmount={5}
         />
