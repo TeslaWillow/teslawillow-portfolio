@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors inspired by "Dark Veil" & "Naomi Ncube" */
+  --color-brand-dark: #030303;
+  --color-brand-purple: #6b21a8;
+  --color-brand-indigo: #3730a3;
+  --color-brand-orange: #f97316;
+  --color-brand-pink: #db2777;
+
+  /* Typographies */
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  /* Custom Animations for the Mesh Gradient */
+  @keyframes mesh-float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+  }
+  --animate-mesh: mesh-float 20s ease-in-out infinite;
+}
+
+/* Base Styles */
+@layer base {
+  body {
+    @apply bg-brand-dark font-sans text-white antialiased;
+    margin: 0;
+  }
+
+  h1, h2, .font-display {
+    @apply font-display;
+  }
+}
+
+/* Glassmorphism Utility (Atomic Design: Atom Level) */
+@layer components {
+  .glass-panel {
+    @apply backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+section {
+  scroll-margin-top: 100px;
+}
