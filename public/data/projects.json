@@ -4,48 +4,48 @@
     "title": "Sube Landing Page",
     "description": "A modern landing page for a Sube Latinoamerica. An international fintech and E-commerce company.",
     "imageUrl": "/assets/images/sube/sube-la.webp",
-    "tags": ["Laravel", "Javascript", "Bootstrap", "Jquery", "Figma", "PHP", "Webpack", "GIT"]
+    "tags": ["Laravel", "Javascript", "Bootstrap", "Jquery", "Figma", "PHP", "Webpack", "GIT", "HTML", "CSS"]
   },
   {
     "id": 2,
     "title": "E-commerce Sites for Sube",
     "description": "Dinamic site generation of webpages made by Sitebuilder, each costumer can create their own e-commerce website with a custom domain and hosting.",
     "imageUrl": "/assets/images/sube/sube-sitios-2.webp",
-    "tags": ["Laravel", "Jquery", "Bootstrap", "Webpack", "PHP", "LESS", "AJAX/Fetch API", "GIT"]
+    "tags": ["Laravel", "Jquery", "Bootstrap", "Webpack", "PHP", "LESS", "AJAX/Fetch API", "GIT", "HTML", "CSS"]
   },
   {
     "id": 3,
     "title": "Sube Admin Panel",
     "description": "Admin panel for Sube Latinoamerica, where the company can manage all the content of the website and the e-commerce sites.",
     "imageUrl": "/assets/images/sube/sube-panel-sitebuilder.webp",
-    "tags": ["Angular", "TypeScript", "Bootstrap", "Webpack", "Node.js", "SCSS/SASS", "RxJS", "JWT", "GIT"]
+    "tags": ["Angular", "TypeScript", "Bootstrap", "Webpack", "Node.js", "SCSS/SASS", "RxJS", "JWT", "GIT", "HTML", "CSS"]
   },
   {
     "id": 4,
     "title": "RestAPI for Sube",
     "description": "REST API for Sube Latinoamerica, providing endpoints for managing users, products, website info, and orders.",
     "imageUrl": "/assets/images/sube/laravel_api.webp",
-    "tags": ["Laravel", "REST API", "PHP", "MySQL", "JWT", "Postman", "GIT", "Desing Patterns"]
+    "tags": ["Laravel", "REST API", "PHP", "MySQL", "JWT", "Postman", "GIT", "Desing Patterns", "HTML", "CSS"]
   },
   {
     "id": 5,
     "title": "F.A.Q. Website for Honduran University",
     "description": "A responsive FAQ website for a Honduran University.",
     "imageUrl": "/assets/images/unah/unah.webp",
-    "tags": ["Angular", "TypeScript", "Bootstrap", "Webpack", "Node.js", "Express", "RxJS", "JWT", "GIT"]
+    "tags": ["Angular", "TypeScript", "Bootstrap", "Webpack", "Node.js", "Express", "RxJS", "JWT", "GIT", "HTML", "CSS"]
   },
   {
     "id": 6,
     "title": "Personal Portfolio",
     "description": "My personal portfolio website built with React & Tailwind CSS",
     "imageUrl": "/assets/images/personal/portfolio.webp",
-    "tags": ["React", "Tailwind CSS", "Vite", "Vercel", "Framer Motion", "GSAP", "GIT"]
+    "tags": ["React", "Tailwind CSS", "Vite", "Vercel", "Framer Motion", "GSAP", "GIT", "HTML", "CSS", "Vercel"]
   },
   {
     "id": 7,
     "title": "MovieApp",
     "description": "A movie discovery application built with Angular and Bootstrap.",
     "imageUrl": "/assets/images/personal/movie-app.webp",
-    "tags": ["Angular", "Bootstrap", "TypeScript", "RxJS", "JWT", "Webpack", "GIT"]
+    "tags": ["Angular", "Bootstrap", "TypeScript", "RxJS", "JWT", "Webpack", "GIT", "HTML", "CSS", "Heroku"]
   }
 ]
