@@ -34,7 +34,7 @@ const Navbar: React.FC = () => {
         ${isScrolled ? 'py-3' : 'py-6'}`}
     >
       {/* Glassmorphism Layer */}
-      <div className={`absolute inset-0 transition-opacity duration-500 -z-10
+      <div className={`absolute inset-0 transition-opacity duration-100 -z-10
         ${isScrolled ? 'opacity-100' : 'opacity-0'}`}
       >
         <div className="w-full h-full bg-black/20 backdrop-blur-lg border-b border-white/10 shadow-2xl" />
