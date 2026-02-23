@@ -2,6 +2,7 @@ import React from 'react';
 import MeshBackground from '../atoms/MeshBackground';
 import Navbar from '../organisms/Navbar';
 import ScrollProgress from '../atoms/ScrollProgress';
+import Footer from '../organisms/Footer';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -29,6 +30,9 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       <main className="relative z-10 pt-32 px-6 md:px-12">
         {children}
       </main>
+
+      {/* Footer */}
+      <Footer />
 
     </div>
   );
