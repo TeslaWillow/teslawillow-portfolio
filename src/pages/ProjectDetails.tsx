@@ -1,8 +1,7 @@
 import { useParams, Link } from 'react-router';
 import portfolioData from '../../public/data/projects.json';
-import Icon from '../components/atoms/Icon';
-import PageTransition from '../components/atoms/PageTransition';
-import Typography from '../components/atoms/Typography';
+import { Icon, PageTransition, Typography } from '../components/atoms';
+import { ChallengeSection } from '../components/molecules';
 
 const ProjectDetails = () => {
     const { projectId } = useParams();
@@ -43,6 +42,8 @@ const ProjectDetails = () => {
                         <p className="text-gray-400 text-lg leading-relaxed mb-8">
                             {project.longDescription || project.description}
                         </p>
+
+                        <ChallengeSection challenge={project.challenge} />
 
                         {project.externalLink && (
                             <a href={project.externalLink} target="_blank" className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-full font-bold hover:scale-105 transition-transform">

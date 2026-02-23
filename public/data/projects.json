@@ -7,7 +7,23 @@
     "imageUrl": "/assets/images/sube/sube-la.webp",
     "externalLink": "https://sube.la/",
     "externalLinkText": null,
-    "tags": ["Laravel", "Javascript", "Bootstrap", "Jquery", "Figma", "PHP", "Webpack", "GIT", "HTML", "CSS"]
+    "tags": [
+      "Laravel",
+      "Javascript",
+      "Bootstrap",
+      "Jquery",
+      "Figma",
+      "PHP",
+      "Webpack",
+      "GIT",
+      "HTML",
+      "CSS"
+    ],
+    "challenge": {
+      "title": "The Challenge: Dynamic Component Reuse",
+      "description": "The most difficult part was dynamically reusing existing components. This was achieved using Laravel Components, applying atomic principles so that sections such as `Partners` could vary depending on the context without duplicating code.",
+      "solution": "Atomic Design & Laravel Blade Components"
+    }
   },
   {
     "id": 2,
@@ -17,7 +33,23 @@
     "imageUrl": "/assets/images/sube/sube-sitios-2.webp",
     "externalLink": "https://www.dleonhn.com/",
     "externalLinkText": "View live client site",
-    "tags": ["Laravel", "Jquery", "Bootstrap", "Webpack", "PHP", "LESS", "AJAX/Fetch API", "GIT", "HTML", "CSS"]
+    "tags": [
+      "Laravel",
+      "Jquery",
+      "Bootstrap",
+      "Webpack",
+      "PHP",
+      "LESS",
+      "AJAX/Fetch API",
+      "GIT",
+      "HTML",
+      "CSS"
+    ],
+    "challenge": {
+      "title": "Multi-Currency Synchronization & Real-Time Accuracy",
+      "description": "The core challenge was ensuring 100% accuracy in currency conversion from local bank rates to USD, as public APIs often showed significant lags. We decoupled this logic into a dedicated Node.js and MongoDB microservice to fetch real-time bank data. In the Laravel backend, I implemented a centralized conversion layer within the Eloquent models to intercept and calculate values before final formatting.",
+      "solution": "Node.js Microservice + Laravel Model Interceptors"
+    }
   },
   {
     "id": 3,
@@ -27,7 +59,24 @@
     "imageUrl": "/assets/images/sube/sube-panel-sitebuilder.webp",
     "externalLink": "https://panel.sube.la",
     "externalLinkText": null,
-    "tags": ["Angular", "TypeScript", "Bootstrap", "Webpack", "Node.js", "SCSS/SASS", "RxJS", "JWT", "GIT", "HTML", "CSS"]
+    "tags": [
+      "Angular",
+      "TypeScript",
+      "Bootstrap",
+      "Webpack",
+      "Node.js",
+      "SCSS/SASS",
+      "RxJS",
+      "JWT",
+      "GIT",
+      "HTML",
+      "CSS"
+    ],
+    "challenge": {
+      "title": "Major Version Migration & Dependency Hell",
+      "description": "The project involved migrating a legacy Angular application to a modern, stable version. This required a meticulous step-by-step upgrade path to maintain system integrity. The main difficulty lay in resolving cascading dependency failures, where libraries like Ngx-bootstrap and WYSIWYG editors required full reimplementation and API alignment to be compatible with the new Angular engine and modern build tools.",
+      "solution": "Incremental Upgrade Strategy & Dependency Auditing"
+    }
   },
   {
     "id": 4,
@@ -37,7 +86,24 @@
     "imageUrl": "/assets/images/sube/laravel_api.webp",
     "externalLink": null,
     "externalLinkText": null,
-    "tags": ["Laravel", "REST API", "PHP", "MySQL", "JWT", "Postman", "GIT", "Desing Patterns", "HTML", "CSS"]
+    "tags": [
+      "Laravel",
+      "REST API",
+      "PHP",
+      "MySQL",
+      "JWT",
+      "Postman",
+      "GIT",
+      "Desing Patterns",
+      "HTML",
+      "CSS",
+      "AWS"
+    ],
+    "challenge": {
+      "title": "Cross-Border Fiscal Logic & Storage Optimization",
+      "description": "The project required generating legal PDF invoices for multiple countries, each with unique tax laws, business rules, and document templates. To avoid a monolithic and unmaintainable codebase, I implemented the Strategy Design Pattern to decouple country-specific logic. Additionally, we optimized performance by implementing a 'Cloud-First' retrieval strategy: checking for existing documents in Amazon S3 before triggering a new generation process to reduce database and CPU overhead.",
+      "solution": "Strategy Pattern + AWS S3 Versioning & Retrieval"
+    }
   },
   {
     "id": 5,
@@ -47,7 +113,24 @@
     "imageUrl": "/assets/images/unah/unah.webp",
     "externalLink": null,
     "externalLinkText": null,
-    "tags": ["Angular", "TypeScript", "Bootstrap", "Webpack", "Node.js", "Express", "RxJS", "JWT", "GIT", "HTML", "CSS"]
+    "tags": [
+      "Angular",
+      "TypeScript",
+      "Bootstrap",
+      "Webpack",
+      "Node.js",
+      "Express",
+      "RxJS",
+      "JWT",
+      "GIT",
+      "HTML",
+      "CSS"
+    ],
+    "challenge": {
+      "title": "Stakeholder Communication & Requirements Alignment",
+      "description": "As one of my first professional experiences during an internship, the main challenge was establishing a consistent and clear communication loop with the project leads. I had to learn how to translate academic requirements into technical tasks while managing expectations and deliverable timelines in a high-pressure institutional environment.",
+      "solution": "Proactive Reporting & Iterative Feedback Loops"
+    }
   },
   {
     "id": 6,
@@ -57,7 +140,23 @@
     "imageUrl": "/assets/images/personal/portfolio.webp",
     "externalLink": null,
     "externalLinkText": null,
-    "tags": ["React", "Tailwind CSS", "Vite", "Vercel", "Framer Motion", "GSAP", "GIT", "HTML", "CSS", "Vercel"]
+    "tags": [
+      "React",
+      "Tailwind CSS",
+      "Vite",
+      "Vercel",
+      "Framer Motion",
+      "GSAP",
+      "GIT",
+      "HTML",
+      "CSS",
+      "Vercel"
+    ],
+    "challenge": {
+      "title": "Mastering React via Atomic Design Architecture",
+      "description": "The main challenge was flattening the React learning curve while simultaneously implementing a strict Atomic Design methodology. Coming from an Angular background, I had to adapt to React's one-way data flow and hooks-based logic, ensuring that every component—from Atoms to Templates—remained pure, reusable, and decoupled according to SOLID principles.",
+      "solution": "Atomic Design Pattern & Component-Driven Development"
+    }
   },
   {
     "id": 7,
@@ -67,6 +166,22 @@
     "imageUrl": "/assets/images/personal/movie-app.webp",
     "externalLink": "https://teslawillow.github.io/MovieApp/home",
     "externalLinkText": "View demo",
-    "tags": ["Angular", "Bootstrap", "TypeScript", "RxJS", "JWT", "Webpack", "GIT", "HTML", "CSS", "Heroku"]
+    "tags": [
+      "Angular",
+      "Bootstrap",
+      "TypeScript",
+      "RxJS",
+      "JWT",
+      "Webpack",
+      "GIT",
+      "HTML",
+      "CSS",
+      "Heroku"
+    ],
+    "challenge": {
+      "title": "Modular Architecture & Responsive Data Display",
+      "description": "The primary challenge was building a scalable Angular application while avoiding 'spaghetti code' during my early learning phase. I focused on implementing a strictly modular architecture and a Mobile-First approach. This involved creating complex, touch-compatible carousel components for movie catalogs and ensuring efficient data binding across multiple views.",
+      "solution": "Component-Based Architecture & Mobile-First Design"
+    }
   }
 ]

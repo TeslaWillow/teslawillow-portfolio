@@ -1,6 +1,6 @@
 import React from 'react';
-import Typography from '../atoms/Typography';
 import { Link } from 'react-router';
+import { Typography } from '../atoms';
 
 interface Project {
   id: number;

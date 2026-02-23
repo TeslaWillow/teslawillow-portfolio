@@ -7,4 +7,11 @@ export interface Project {
     externalLink:     string | null;
     externalLinkText: string | null;
     tags:             string[];
+    challenge?:       Challenge | null;
+}
+
+export interface Challenge {
+    title:       string;
+    description: string;
+    solution:    string;
 }
