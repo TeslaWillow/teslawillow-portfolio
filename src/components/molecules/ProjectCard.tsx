@@ -22,7 +22,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
     <Link
       to={`/project/${project.id}`}
     >
-      <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all hover:bg-white/10 hover:border-white/20">
+      <div className="group glass-card glass-card-hover">
         <div className="aspect-video w-full overflow-hidden">
           <img
             src={project.imageUrl}
