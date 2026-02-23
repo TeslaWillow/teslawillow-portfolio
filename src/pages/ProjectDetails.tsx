@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router';
 import portfolioData from '../../public/data/projects.json';
 import Icon from '../components/atoms/Icon';
 import PageTransition from '../components/atoms/PageTransition';
+import Typography from '../components/atoms/Typography';
 
 const ProjectDetails = () => {
     const { projectId } = useParams();
@@ -19,20 +20,20 @@ const ProjectDetails = () => {
 
     return (
         <PageTransition>
-            <div className="pb-32 px-6 max-w-5xl mx-auto">
+            <div className="pb-32 px-4 md:px-8 max-w-6xl mx-auto pt-24 md:pt-32">
                 <Link to="/" className="flex items-center gap-2 text-gray-400 hover:text-white mb-8 transition-colors">
                     <Icon name="ArrowLeft" size={16} />
                     Back to Home
                 </Link>
 
-                <div className="grid md:grid-cols-2 gap-12 ">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
                     <img
                         src={project.imageUrl}
                         className="rounded-2xl border border-white/10 w-full object-cover aspect-video"
                         alt={project.title}
                     />
                     <div className="group p-5 glass-card">
-                        <h1 className="text-5xl font-display font-bold mb-4">{project.title}</h1>
+                        <Typography variant='h2' className='mb-5'>{project.title}</Typography>
                         <div className="flex flex-wrap gap-2 mb-6">
                             {project.tags.map((tag: string) => (
                                 <span key={tag} className="text-[10px] border border-white/20 px-3 py-1 rounded-full">{tag}</span>
