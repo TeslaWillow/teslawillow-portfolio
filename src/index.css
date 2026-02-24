@@ -5,23 +5,15 @@ section { scroll-margin-top: 100px; }
 
 @theme {
   /* Colors inspired by "Dark Veil" & "Naomi Ncube" */
-  --color-brand-dark: #030303;
+  --color-brand-dark:   #030303;
   --color-brand-purple: #6b21a8;
   --color-brand-indigo: #3730a3;
   --color-brand-orange: #f97316;
-  --color-brand-pink: #db2777;
+  --color-brand-pink:   #db2777;
 
   /* Typographies */
   --font-display: "Playfair Display", serif;
   --font-sans: "Inter", system-ui, sans-serif;
-
-  /* Custom Animations for the Mesh Gradient */
-  @keyframes mesh-float {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(30px, -50px) scale(1.1); }
-    66% { transform: translate(-20px, 20px) scale(0.9); }
-  }
-  --animate-mesh: mesh-float 20s ease-in-out infinite;
 }
 
 /* Base Styles */
@@ -38,13 +30,46 @@ section { scroll-margin-top: 100px; }
 
 /* Glassmorphism Utility (Atomic Design: Atom Level) */
 @layer components {
-  .glass-panel {
-    @apply backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl;
-  }
   .glass-card {
     @apply relative overflow-hidden rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm;
   }
   .glass-card-hover {
     @apply transition-all hover:bg-white/10 hover:border-white/20;
   }
+}
+
+
+@-webkit-keyframes wiggle {
+    0% { -webkit-transform: skewX(24deg); } 
+    10% { -webkit-transform: skewX(-8deg); }
+    20% { -webkit-transform: skewX(55deg); }
+    30% { -webkit-transform: skewX(-90deg); }
+    40% { -webkit-transform: skewX(29deg); }
+    50% { -webkit-transform: skewX(-90deg); }
+    60% { -webkit-transform: skewX(3deg); }
+    70% { -webkit-transform: skewX(-2deg); }
+    80% { -webkit-transform: skewX(1deg); }
+    90% { -webkit-transform: skewX(10deg); }
+    100% { -webkit-transform: skewX(0deg); }
+}
+
+.glitch-text {
+  position:relative;
+  font-weight:normal;
+  font-size:8em;
+  text-align:center;
+  cursor:pointer;
+  color:rgba(255,255,255,0.95);
+  text-shadow:1px 1px rgba(246, 0, 153,0.8),
+             -1px -1px rgba(15, 210, 255,0.8),
+             -1px 0px rgba(255, 210, 0, 1);
+}
+
+.glitch-text:hover {
+  -webkit-animation: wiggle 0.2s 2;
+  /*transition:all ease-out 0.1s;*/
+  text-shadow:30px 13px rgba(246, 0, 153,0.8),
+             -38px -4px rgba(15, 210, 255,0.8),
+             -2px -4px rgba(255, 210, 0, 1);
+
 }
