@@ -4,6 +4,7 @@ export interface Project {
     description:      string;
     longDescription:  string;
     imageUrl:         string;
+    images:           string[];
     externalLink:     string | null;
     externalLinkText: string | null;
     tags:             string[];

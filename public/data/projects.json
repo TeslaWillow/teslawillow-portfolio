@@ -5,6 +5,11 @@
     "description": "A modern landing page for a Sube Latinoamerica. An international fintech and E-commerce company.",
     "longDescription": "The landing page for Sube Latinoamerica is designed to provide a modern and engaging user experience. It features a clean and responsive design, showcasing the company's services and products effectively. The page includes sections for company information, services offered, customer testimonials, and a contact form. The use of vibrant colors and interactive elements helps to capture the attention of visitors and encourage them to explore further.",
     "imageUrl": "/assets/images/sube/sube-la.webp",
+    "images": [
+      "/assets/images/sube/sube-la.webp",
+      "/assets/images/sube/sube-la-2.webp",
+      "/assets/images/sube/sube-la-3.webp"
+    ],
     "externalLink": "https://sube.la/",
     "externalLinkText": null,
     "tags": [
@@ -31,6 +36,12 @@
     "description": "Dinamic site generation of webpages made by Sitebuilder, each costumer can create their own e-commerce website with a custom domain and hosting.",
     "longDescription": "Dinamic sites build by Sitebuilder, each costumer can create their own e-commerce website with a custom domain and hosting. The landing page for Sube Latinoamerica is designed to provide a modern and engaging user experience. It features a clean and responsive design, showcasing the company's services and products effectively. The page includes sections for company information, services offered, customer testimonials, and a contact form. The use of vibrant colors and interactive elements helps to capture the attention of visitors and encourage them to explore further.",
     "imageUrl": "/assets/images/sube/sube-sitios-2.webp",
+    "images": [
+      "/assets/images/sube/sube-sitios-2.webp",
+      "/assets/images/sube/sube-sitios.webp",
+      "/assets/images/sube/sube-sitios-3.webp",
+      "/assets/images/sube/sube-sitios-4.webp"
+    ],
     "externalLink": "https://www.dleonhn.com/",
     "externalLinkText": "View live client site",
     "tags": [
@@ -57,6 +68,11 @@
     "description": "Admin panel for Sube Latinoamerica, where the company can manage all the content of the website and the e-commerce sites.",
     "longDescription": "The admin panel for Sube Latinoamerica is a comprehensive tool that allows the company to manage all the content of the website and the e-commerce sites. It features a clean and responsive design, providing an intuitive interface for managing users, products, website information, and orders. The panel includes sections for user management, product catalog management, website settings, and order tracking. The use of vibrant colors and interactive elements helps to capture the attention of administrators and encourage them to explore further.",
     "imageUrl": "/assets/images/sube/sube-panel-sitebuilder.webp",
+    "images": [
+      "/assets/images/sube/sube-panel-sitebuilder.webp",
+      "/assets/images/sube/sube-panel-dashboard.webp",
+      "/assets/images/sube/sube-panel-login.webp"
+    ],
     "externalLink": "https://panel.sube.la",
     "externalLinkText": null,
     "tags": [
@@ -84,6 +100,10 @@
     "description": "REST API for Sube Latinoamerica, providing endpoints for managing users, products, website info, and orders.",
     "longDescription": "The REST API for Sube Latinoamerica is a robust backend service that provides endpoints for managing users, products, website information, and orders. It is built with Laravel and follows RESTful principles to ensure scalability and maintainability. The API supports authentication via JWT tokens and includes comprehensive documentation for developers.",
     "imageUrl": "/assets/images/sube/laravel_api.webp",
+    "images": [
+      "/assets/images/sube/laravel_api.webp",
+      "/assets/images/sube/laravel_api_invoice.webp"
+    ],
     "externalLink": null,
     "externalLinkText": null,
     "tags": [
@@ -164,6 +184,10 @@
     "description": "A movie discovery application built with Angular and Bootstrap.",
     "longDescription": "The MovieApp is a responsive and interactive movie discovery application built with Angular and Bootstrap. It allows users to browse, search, and discover movies with detailed information. The app features a clean and intuitive interface, making it easy for users to find their favorite movies.",
     "imageUrl": "/assets/images/personal/movie-app.webp",
+    "images": [
+      "/assets/images/personal/movie-app.webp",
+      "/assets/images/personal/movie-app-2.webp"
+    ],
     "externalLink": "https://teslawillow.github.io/MovieApp/home",
     "externalLinkText": "View demo",
     "tags": [

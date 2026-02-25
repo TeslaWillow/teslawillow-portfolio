@@ -3,9 +3,13 @@ import portfolioData from '../../public/data/projects.json';
 import { Icon, PageTransition, Typography } from '../components/atoms';
 import { ChallengeSection } from '../components/molecules';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCards } from 'swiper/modules';
+
 const ProjectDetails = () => {
     const { projectId } = useParams();
     const project = portfolioData.find(p => p.id.toString() === projectId) || null;
+    const projectImages = project?.images || [];
 
     // Guard Clause: If project not found, show error message and back link
     if (!project) {
@@ -26,11 +30,40 @@ const ProjectDetails = () => {
                 </Link>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
-                    <img
-                        src={project.imageUrl}
-                        className="rounded-2xl border border-white/10 w-full object-cover aspect-video"
-                        alt={project.title}
-                    />
+                    <div className="w-full max-w-[320px] sm:max-w-100 lg:max-w-125 mx-auto md:mx-0">
+                        <Swiper
+                            effect={'cards'}
+                            grabCursor={true}
+                            modules={[EffectCards]}
+                            className="w-full aspect-video my-swiper" // Mantiene la proporción de tus capturas
+                        >
+                            {/* IMAGE LIST */}
+                            {projectImages.map((imgUrl, index) => (
+                                <SwiperSlide 
+                                    key={`${project.id}-img-${index}`}
+                                    className="rounded-2xl overflow-hidden bg-white/5 border border-white/10"
+                                >
+                                    <img
+                                        src={imgUrl}
+                                        className="w-full h-full object-cover"
+                                        alt={`${project.title} screenshot ${index + 1}`}
+                                        loading='lazy'
+                                    />
+                                </SwiperSlide>
+                            ))}
+                            {/* NO IMAGE LIST */}
+                            {projectImages.length === 0 && (
+                                <SwiperSlide className="rounded-2xl border border-white/10 bg-[#111] flex items-center justify-center">
+                                    <img
+                                        src={project.imageUrl}
+                                        className="w-full h-full object-cover"
+                                        alt={`${project.title} screenshot`}
+                                        loading='lazy'
+                                    />
+                                </SwiperSlide>
+                            )}
+                        </Swiper>
+                    </div>
                     <div className="group p-5 glass-card">
                         <Typography variant='h2' className='mb-5'>{project.title}</Typography>
                         <div className="flex flex-wrap gap-2 mb-6">
