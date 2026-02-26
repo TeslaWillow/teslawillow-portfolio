@@ -3,6 +3,7 @@
 @import "swiper/css/effect-cards";
 
 html { scroll-behavior: smooth; }
+html, body { overflow-x: hidden; }
 section { scroll-margin-top: 100px; }
 
 @theme {

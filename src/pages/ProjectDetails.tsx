@@ -5,6 +5,7 @@ import { ChallengeSection } from '../components/molecules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards } from 'swiper/modules';
+import SafeImage from '../components/atoms/SafeImage';
 
 const ProjectDetails = () => {
     const { projectId } = useParams();
@@ -38,27 +39,27 @@ const ProjectDetails = () => {
                             className="w-full aspect-video my-swiper" // Mantiene la proporción de tus capturas
                         >
                             {/* IMAGE LIST */}
-                            {projectImages.map((imgUrl, index) => (
-                                <SwiperSlide 
-                                    key={`${project.id}-img-${index}`}
-                                    className="rounded-2xl overflow-hidden bg-white/5 border border-white/10"
-                                >
-                                    <img
-                                        src={imgUrl}
-                                        className="w-full h-full object-cover"
-                                        alt={`${project.title} screenshot ${index + 1}`}
-                                        loading='lazy'
-                                    />
-                                </SwiperSlide>
-                            ))}
+                            {projectImages.map((imgUrl, index) => {
+                                return (
+                                    <SwiperSlide
+                                        key={`${project.id}-${project.title}-img-${index}`}
+                                        className="rounded-2xl overflow-hidden bg-white/5 border border-white/10"
+                                    >
+                                        <SafeImage 
+                                            src={imgUrl} 
+                                            alt={`${project.title} screenshot ${index + 1}`} 
+                                            className="shadow-2xl"
+                                        />
+                                    </SwiperSlide>
+                                )
+                            })}
                             {/* NO IMAGE LIST */}
                             {projectImages.length === 0 && (
                                 <SwiperSlide className="rounded-2xl border border-white/10 bg-[#111] flex items-center justify-center">
-                                    <img
-                                        src={project.imageUrl}
-                                        className="w-full h-full object-cover"
-                                        alt={`${project.title} screenshot`}
-                                        loading='lazy'
+                                    <SafeImage 
+                                        src={project.imageUrl} 
+                                        alt={`${project.title} screenshot`} 
+                                        className="shadow-2xl"
                                     />
                                 </SwiperSlide>
                             )}
@@ -67,8 +68,10 @@ const ProjectDetails = () => {
                     <div className="group p-5 glass-card">
                         <Typography variant='h2' className='mb-5'>{project.title}</Typography>
                         <div className="flex flex-wrap gap-2 mb-6">
-                            {project.tags.map((tag: string) => (
-                                <span key={tag} className="text-[10px] border border-white/20 px-3 py-1 rounded-full">{tag}</span>
+                            {project.tags.map((tag: string, index: number) => (
+                                <span key={`${project.id}_${index}-${tag}`} className="text-[10px] border border-white/20 px-3 py-1 rounded-full">
+                                    {tag}
+                                </span>
                             ))}
                         </div>
                         <hr className="border-white/10 mb-8" />

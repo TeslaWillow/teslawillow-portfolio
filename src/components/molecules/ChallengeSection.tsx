@@ -14,7 +14,7 @@ const ChallengeSection: React.FC<ChallengeProps> = ({ challenge }) => {
   if (!challenge) return null;
 
   return (
-    <div className="my-5 p-8 rounded-3xl border border-purple-500/20 bg-green-500/5 backdrop-blur-md relative overflow-hidden group">
+    <div className="my-5 p-4 md:p-8 rounded-3xl border border-purple-500/20 bg-green-500/5 backdrop-blur-md relative overflow-hidden group">
      
       <div className="absolute -right-8 -top-8 text-purple-500/10 rotate-12 group-hover:rotate-0 transition-transform duration-500">
         <Icon name="Zap" size={120} />
