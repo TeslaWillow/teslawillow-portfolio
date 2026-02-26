@@ -2,19 +2,24 @@ import React from 'react';
 
 interface SafeImageProps {
   src: string;
+  srcMobile?: string; // Optional prop for mobile-specific assets
   alt: string;
   className?: string;
 }
 
-const SafeImage: React.FC<SafeImageProps> = ({ src, alt, className }) => {
-  // Logic: Generate fallback URL if it's a webp image
-  const isWebp = src.endsWith('.webp');
-  const fallbackUrl = isWebp ? src.replace(/\.(webp)$/, '.jpg') : src;
+const SafeImage: React.FC<SafeImageProps> = ({ src, srcMobile, alt, className }) => {
+  // Helpers to generate fallbacks
+  const getFallback = (path: string) => path.endsWith('.webp') 
+    ? path.replace(/\.(webp)$/, '.jpg') 
+    : path;
+
+  const desktopFallback = getFallback(src);
+  const mobileFallback = srcMobile ? getFallback(srcMobile) : null;
 
   const handleError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
     const target = e.target as HTMLImageElement;
     target.src = '/assets/images/placeholder-error.jpg';
-    target.onerror = null; // Guard: prevent infinite loops
+    target.onerror = null; // Guard Clause: prevent infinite loops
 
     const container = target.parentElement;
     if (container) {
@@ -24,10 +29,20 @@ const SafeImage: React.FC<SafeImageProps> = ({ src, alt, className }) => {
 
   return (
     <picture className={className}>
-      {isWebp && <source srcSet={src} type="image/webp" />}
-      <source srcSet={fallbackUrl} type="image/jpeg" />
+      {/* MOBILE SOURCES (Max-width: 768px) */}
+      {srcMobile && (
+        <>
+          <source srcSet={srcMobile} media="(max-width: 768px)" type="image/webp" />
+          <source srcSet={mobileFallback!} media="(max-width: 768px)" type="image/jpeg" />
+        </>
+      )}
+
+      {/* DESKTOP / DEFAULT SOURCES */}
+      {src.endsWith('.webp') && <source srcSet={src} type="image/webp" />}
+      <source srcSet={desktopFallback} type="image/jpeg" />
+
       <img
-        src={fallbackUrl}
+        src={desktopFallback}
         className={`w-full h-full object-cover ${className}`}
         alt={alt}
         loading="lazy"

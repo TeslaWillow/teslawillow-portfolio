@@ -31,12 +31,12 @@ const ProjectDetails = () => {
                 </Link>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
-                    <div className="w-full max-w-[320px] sm:max-w-100 lg:max-w-125 mx-auto md:mx-0">
+                    <div className="w-full max-w-70 sm:max-w-100 lg:max-w-125 mx-auto md:mx-0">
                         <Swiper
                             effect={'cards'}
                             grabCursor={true}
                             modules={[EffectCards]}
-                            className="w-full aspect-video my-swiper" // Mantiene la proporción de tus capturas
+                            className="w-full aspect-3/4 md:aspect-video my-swiper transition-all duration-500" 
                         >
                             {/* IMAGE LIST */}
                             {projectImages.map((imgUrl, index) => {
@@ -46,7 +46,8 @@ const ProjectDetails = () => {
                                         className="rounded-2xl overflow-hidden bg-white/5 border border-white/10"
                                     >
                                         <SafeImage 
-                                            src={imgUrl} 
+                                            src={imgUrl}
+                                            srcMobile={project.imagesMobile?.[index]}
                                             alt={`${project.title} screenshot ${index + 1}`} 
                                             className="shadow-2xl"
                                         />

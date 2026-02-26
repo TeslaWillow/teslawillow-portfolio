@@ -10,6 +10,11 @@
       "/assets/images/sube/sube-la-2.webp",
       "/assets/images/sube/sube-la-3.webp"
     ],
+    "imagesMobile": [
+      "/assets/images/sube/mobile/sube-la.webp",
+      "/assets/images/sube/mobile/sube-la-2.webp",
+      "/assets/images/sube/mobile/sube-la-3.webp"
+    ],
     "externalLink": "https://sube.la/",
     "externalLinkText": null,
     "tags": [
@@ -42,6 +47,12 @@
       "/assets/images/sube/sube-sitios-3.webp",
       "/assets/images/sube/sube-sitios-4.webp"
     ],
+    "imagesMobile": [
+      "/assets/images/sube/mobile/sube-sitios-2.webp",
+      "/assets/images/sube/mobile/sube-sitios.webp",
+      "/assets/images/sube/mobile/sube-sitios-3.webp",
+      "/assets/images/sube/mobile/sube-sitios-4.webp"
+    ],
     "externalLink": "https://www.dleonhn.com/",
     "externalLinkText": "View live client site",
     "tags": [
@@ -73,6 +84,11 @@
       "/assets/images/sube/sube-panel-dashboard.webp",
       "/assets/images/sube/sube-panel-login.webp"
     ],
+    "imagesMobile": [
+      "/assets/images/sube/mobile/sube-panel.webp",
+      "/assets/images/sube/mobile/sube-panel-2.webp",
+      "/assets/images/sube/mobile/sube-panel-3.webp"
+    ],
     "externalLink": "https://panel.sube.la",
     "externalLinkText": null,
     "tags": [
@@ -103,6 +119,10 @@
     "images": [
       "/assets/images/sube/laravel_api.webp",
       "/assets/images/sube/laravel_api_invoice.webp"
+    ],
+    "imagesMobile": [
+      "/assets/images/sube/mobile/Laravel-API-mobile.webp",
+      "/assets/images/sube/mobile/sube-api-mobile.webp"
     ],
     "externalLink": null,
     "externalLinkText": null,
@@ -187,6 +207,10 @@
     "images": [
       "/assets/images/personal/movie-app.webp",
       "/assets/images/personal/movie-app-2.webp"
+    ],
+    "imagesMobile": [
+      "/assets/images/personal/mobile/cinema-app.webp",
+      "/assets/images/personal/mobile/cinema-app-2.webp"
     ],
     "externalLink": "https://teslawillow.github.io/MovieApp/home",
     "externalLinkText": "View demo",
