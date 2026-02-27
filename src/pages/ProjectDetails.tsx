@@ -58,7 +58,8 @@ const ProjectDetails = () => {
                             {projectImages.length === 0 && (
                                 <SwiperSlide className="rounded-2xl border border-white/10 bg-[#111] flex items-center justify-center">
                                     <SafeImage 
-                                        src={project.imageUrl} 
+                                        src={project.imageUrl}
+                                        srcMobile={project.imagesMobile?.[0]}
                                         alt={`${project.title} screenshot`} 
                                         className="shadow-2xl"
                                     />

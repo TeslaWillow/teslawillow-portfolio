@@ -178,6 +178,9 @@
     "description": "My personal portfolio website built with React & Tailwind CSS",
     "longDescription": "The personal portfolio website is a modern and responsive platform showcasing my skills, projects, and experience. It is built with React and Tailwind CSS, featuring a clean and intuitive design that highlights my work effectively. The site includes sections for my bio, projects, skills, and contact information.",
     "imageUrl": "/assets/images/personal/portfolio.webp",
+    "imagesMobile": [
+      "/assets/images/personal/mobile/portfolio.webp"
+    ],
     "externalLink": null,
     "externalLinkText": null,
     "tags": [
