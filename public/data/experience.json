@@ -17,7 +17,7 @@
     "description": "Developed internal academic modules and improved stakeholder communication.",
     "skills": ["Education"],
     "geometry": "icosahedron",
-    "geometryColor": "#5291FF"
+    "geometryColor": "#0087FF"
   },
   {
     "id": 3,
@@ -27,6 +27,6 @@
     "description": "Built custom web applications for local businesses, enhancing their online presence and operational efficiency.",
     "skills": ["Web Development", "E-Commerce"],
     "geometry": "knot",
-    "geometryColor": "#A36EFF"
+    "geometryColor": "#FF00F8"
   }
 ]

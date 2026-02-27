@@ -7,6 +7,9 @@ import { ContactShadows } from '@react-three/drei/core/ContactShadows';
 type Shapes = 'torus' | 'box' | 'pyramid' | 'icosahedron' | 'knot';
 
 const ExperienceCanvas: React.FC = () => {
+  
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
   return (
     <div className="absolute pointer-events-none inset-0 z-0 w-full h-full">
       <Canvas 
@@ -32,9 +35,9 @@ const ExperienceCanvas: React.FC = () => {
             type={exp.geometry as Shapes}
             // Alternate positions: left for even, right for odd, and staggered vertically
             position={[
-              index % 2 === 0 ? 6 : -6, 
-              -index * 5.5 + 5, // Staggered vertical position
-              -10 - index * 5 // Staggered depth for parallax effect
+              isMobile ? 0.5 : (index % 2 === 0 ? 10 : -10), 
+              -index * 6.5 + 5, 
+              isMobile ? -25 : -10 - index * 5
             ]}
             index={index}
           />

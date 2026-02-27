@@ -7,7 +7,7 @@ const ExperienceTimeline: React.FC = () => {
     if (!experienceData || experienceData.length === 0) return null;
 
     return (
-        <section className="relative py-32 px-4 overflow-hidden">
+        <section className="relative py-8 md:py-32 px-4 overflow-hidden">
 
             {/* BACKGROUND LAYER */}
             <ExperienceCanvas />
@@ -15,7 +15,10 @@ const ExperienceTimeline: React.FC = () => {
             {/* CONTENT LAYER */}
             <div className="relative z-10 max-w-6xl mx-auto px-4">
                 <div className="relative">
-                    <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-white/20 to-transparent hidden md:block" />
+
+                    {/* VERTICAL LINE */}
+                    <div className="absolute left-4 md:left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-linear-to-b from-green-500/50 via-green-500 to-transparent" />
+
                     <div className="space-y-4">
                         {experienceData.map((exp, index) => (
                             <ExperienceCard
