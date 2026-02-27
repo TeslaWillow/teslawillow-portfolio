@@ -1,12 +1,13 @@
 [
   {
     "id": 1,
-    "company": "Company Name",
-    "role": "Senior Fullstack Developer",
-    "period": "2022 - Present",
-    "description": "Led the development of multi-country invoicing systems using Laravel and Angular.",
-    "skills": ["Laravel", "Angular", "Three.js"],
-    "geometry": "torus" 
+    "company": "Sube Latinoamerica",
+    "role": "Senior Web Developer",
+    "period": "2021 - 2025",
+    "description": "Led the development of multi-country invoicing systems using Laravel and Angular. Achieved 30% faster processing and improved user experience across platforms.",
+    "skills": ["Fintech", "E-Commerce", "Education"],
+    "geometry": "torus" ,
+    "geometryColor": "#4DE8DE"
   },
   {
     "id": 2,
@@ -14,7 +15,18 @@
     "role": "Software Intern",
     "period": "2020 - 2021",
     "description": "Developed internal academic modules and improved stakeholder communication.",
-    "skills": ["PHP", "JavaScript"],
-    "geometry": "box"
+    "skills": ["Education"],
+    "geometry": "box",
+    "geometryColor": "#5291FF"
+  },
+  {
+    "id": 3,
+    "company": "Freelance",
+    "role": "Full Stack Developer",
+    "period": "2019 - PRESENT",
+    "description": "Built custom web applications for local businesses, enhancing their online presence and operational efficiency.",
+    "skills": ["Web Development", "E-Commerce"],
+    "geometry": "pyramid",
+    "geometryColor": "#A36EFF"
   }
 ]

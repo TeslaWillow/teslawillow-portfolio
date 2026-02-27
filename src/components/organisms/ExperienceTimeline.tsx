@@ -7,7 +7,7 @@ const ExperienceTimeline: React.FC = () => {
     if (!experienceData || experienceData.length === 0) return null;
 
     return (
-        <section className="relative py-32 px-4 overflow-hidden bg-[#050505]">
+        <section className="relative py-32 px-4 overflow-hidden">
 
             {/* BACKGROUND LAYER */}
             <ExperienceCanvas />
