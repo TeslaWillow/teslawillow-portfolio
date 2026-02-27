@@ -1,21 +1,27 @@
 import { Canvas } from '@react-three/fiber';
-import { FloatingGeometry } from '../atoms';
+import { CursorLight, FloatingGeometry } from '../atoms';
 import experienceData from '../../../public/data/experience.json';
 import { Environment } from '@react-three/drei/core/Environment';
 import { ContactShadows } from '@react-three/drei/core/ContactShadows';
 
+type Shapes = 'torus' | 'box' | 'pyramid' | 'icosahedron' | 'knot';
+
 const ExperienceCanvas: React.FC = () => {
   return (
-    <div className="absolute inset-0 z-0 pointer-events-none w-full h-full">
+    <div className="absolute pointer-events-none inset-0 z-0 w-full h-full">
       <Canvas 
         camera={{ position: [0, 0, 15], fov: 50 }}
         dpr={[1,2]}
+        eventSource={document.getElementById('root') || undefined}
       >
         {/* AMBIENT LIGHTS */}
-        <ambientLight intensity={5} />
+        <ambientLight intensity={3.5} />
+
+        {/* CURSOR-BASED LIGHT: A spotlight that follows the cursor for dynamic interaction */}
+        <CursorLight />
 
         {/* DIRECTIONAL LIGHTS */}
-        <pointLight position={[10, 10, 10]} intensity={2} color="#ffffff" />
+        {/* <pointLight position={[10, 10, 10]} intensity={2} color="#ffffff" /> */}
     
         {/* ENVIRONMENT MAP: City preset for subtle reflections and ambient lighting */}
         <Environment preset="city" />
@@ -23,7 +29,7 @@ const ExperienceCanvas: React.FC = () => {
         {experienceData.map((exp, index) => (
           <FloatingGeometry 
             key={exp.id}
-            type={exp.geometry as 'torus' | 'box'}
+            type={exp.geometry as Shapes}
             // Alternate positions: left for even, right for odd, and staggered vertically
             position={[
               index % 2 === 0 ? 6 : -6, 

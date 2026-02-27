@@ -16,7 +16,7 @@
     "period": "2020 - 2021",
     "description": "Developed internal academic modules and improved stakeholder communication.",
     "skills": ["Education"],
-    "geometry": "box",
+    "geometry": "icosahedron",
     "geometryColor": "#5291FF"
   },
   {
@@ -26,7 +26,7 @@
     "period": "2019 - PRESENT",
     "description": "Built custom web applications for local businesses, enhancing their online presence and operational efficiency.",
     "skills": ["Web Development", "E-Commerce"],
-    "geometry": "pyramid",
+    "geometry": "knot",
     "geometryColor": "#A36EFF"
   }
 ]

@@ -193,7 +193,9 @@
       "GIT",
       "HTML",
       "CSS",
-      "Vercel"
+      "Vercel",
+      "THREE.js",
+      "React Three Fiber"
     ],
     "challenge": {
       "title": "Mastering React via Atomic Design Architecture",

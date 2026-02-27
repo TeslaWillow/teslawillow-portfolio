@@ -6,7 +6,7 @@ import * as THREE from 'three';
 import experienceData from '../../../public/data/experience.json';
 
 interface Props {
-  type: 'torus' | 'box' | 'pyramid';
+  type: 'torus' | 'box' | 'pyramid' | 'icosahedron' | 'knot';
   position: [number, number, number];
   index: number; // Unique Animations
 }
@@ -16,13 +16,13 @@ const FloatingGeometry: React.FC<Props> = ({ type, position, index }: Props) => 
 
   const geometryColor = experienceData[index]?.geometryColor || "#DA70D6";
 
-  // Animación constante de rotación (KISS)
+  // Rotation animation based on elapsed time and scroll position for dynamic interaction
   useFrame((state) => {
     if (!meshRef.current) return;
     const t = state.clock.getElapsedTime();
 
     const scrollY = window.scrollY || window.pageYOffset;
-    const scrollFactor = scrollY * 0.001; // Ajusta este factor para controlar la sensibilidad al scroll
+    const scrollFactor = scrollY * 0.001; // Scroll sensitivity factor
 
     meshRef.current.rotation.y = t * 0.3 + scrollFactor;
     meshRef.current.rotation.z = t * 0.2 + scrollFactor * 0.5;
@@ -55,6 +55,18 @@ const FloatingGeometry: React.FC<Props> = ({ type, position, index }: Props) => 
              args[4] = Height Segments (1 is enough for a pyramid)
           */
           <cylinderGeometry args={[0, 2.5, 4, 4, 1]} /> 
+        )}
+        {type === 'icosahedron' && (
+          /* args[0] = Radius (size of the icosahedron)
+             args[1] = Detail (0 for basic, higher for more subdivisions)
+          */
+          <icosahedronGeometry args={[2, 0]} />
+        )}
+        {type === 'knot' && (
+          /* args: [radio, tube width , tubularSegments, radialSegments, p, q] 
+            p & q defines the type of knot. Commonly used values are p=2, q=3 for a trefoil knot.
+          */
+          <torusKnotGeometry args={[1.5, 0.4, 128, 32]} /> 
         )}
 
         {/* Dark Veil: glassmorphism */}
