@@ -1,13 +1,12 @@
 import React from 'react';
 import * as LucideIcons from 'lucide-react';
+import type { LucideProps } from 'lucide-react';
 
-// Name of icons (Intellisense)
+// File-level constant for better maintainability and to avoid magic strings
 export type IconName = keyof typeof LucideIcons;
 
-interface IconProps {
+interface IconProps extends LucideProps {
   name: IconName;
-  color?: string;
-  size?: number | string;
   className?: string;
 }
 
@@ -15,23 +14,25 @@ const NAME_OF_PACKAGE = "lucide-react";
 
 /**
  * Icon Atom
- * Wrapper for Lucide icons to ensure consistency across the portfolio.
+ * A simple wrapper around the lucide-react library to allow dynamic icon rendering by name.
  */
 const Icon: React.FC<IconProps> = ({ 
   name, 
   color = 'currentColor', 
   size = 20, 
-  className = '' 
+  className = '',
+  ...props 
 }) => {
-  // Guard Clause: Check if icon exists
-  const LucideIcon = LucideIcons[name] as React.ElementType;
+  // Guard Clause: Check if the icon name exists in the package to prevent runtime errors
+  const IconComponent = LucideIcons[name] as React.ComponentType<LucideProps>;
   
-  if (!LucideIcon) {
+  if (!IconComponent) {
     console.warn(`Icon "${name}" does not exist in ${NAME_OF_PACKAGE}`);
     return null;
   }
 
-  return <LucideIcon color={color} size={size} className={className} />;
+  // Pass through color, size, and any additional props to the icon component for flexibility
+  return <IconComponent color={color} size={size} className={className} {...props} />;
 };
 
 export default Icon;
