@@ -1,11 +1,10 @@
 import { useParams, Link } from 'react-router';
 import portfolioData from '../../public/data/projects.json';
-import { Icon, PageTransition, Typography } from '../components/atoms';
+import { Icon, PageTransition, Typography, SafeImage } from '../components/atoms';
 import { ChallengeSection } from '../components/molecules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCards } from 'swiper/modules';
-import SafeImage from '../components/atoms/SafeImage';
 
 const ProjectDetails = () => {
     const { projectId } = useParams();

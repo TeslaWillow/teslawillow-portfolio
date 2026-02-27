@@ -1,6 +1,6 @@
 import { Link } from 'react-router';
 import { motion } from 'framer-motion';
-import Icon from '../components/atoms/Icon';
+import { Icon } from '../components/atoms';
 
 const Page404 = () => {
   return (

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "company": "Company Name",
+    "role": "Senior Fullstack Developer",
+    "period": "2022 - Present",
+    "description": "Led the development of multi-country invoicing systems using Laravel and Angular.",
+    "skills": ["Laravel", "Angular", "Three.js"],
+    "geometry": "torus" 
+  },
+  {
+    "id": 2,
+    "company": "UNAH",
+    "role": "Software Intern",
+    "period": "2020 - 2021",
+    "description": "Developed internal academic modules and improved stakeholder communication.",
+    "skills": ["PHP", "JavaScript"],
+    "geometry": "box"
+  }
+]

@@ -1,8 +1,6 @@
 import React from 'react';
-import MeshBackground from '../atoms/MeshBackground';
-import Navbar from '../organisms/Navbar';
-import ScrollProgress from '../atoms/ScrollProgress';
-import Footer from '../organisms/Footer';
+import { MeshBackground, ScrollProgress } from '../atoms';
+import { Footer, Navbar } from '../organisms';
 
 interface MainLayoutProps {
   children: React.ReactNode;
