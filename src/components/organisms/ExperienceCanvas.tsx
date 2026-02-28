@@ -3,12 +3,26 @@ import { CursorLight, FloatingGeometry } from '../atoms';
 import experienceData from '../../../public/data/experience.json';
 import { Environment } from '@react-three/drei/core/Environment';
 import { ContactShadows } from '@react-three/drei/core/ContactShadows';
+import { useEffect, useState } from 'react';
 
 type Shapes = 'torus' | 'box' | 'pyramid' | 'icosahedron' | 'knot';
 
 const ExperienceCanvas: React.FC = () => {
-  
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+    const [isMobile, setIsMobile] = useState(false);
+    
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+        
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    // Prevent rendering the canvas on mobile devices for performance reasons, 
+    // as complex 3D scenes can be resource-intensive and may not provide a good user experience on smaller screens.
+    if (isMobile) return null;
 
   return (
     <div className="absolute pointer-events-none inset-0 z-0 w-full h-full">
