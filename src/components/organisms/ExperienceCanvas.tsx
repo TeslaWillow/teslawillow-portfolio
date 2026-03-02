@@ -49,7 +49,7 @@ const ExperienceCanvas: React.FC = () => {
             type={exp.geometry as Shapes}
             // Alternate positions: left for even, right for odd, and staggered vertically
             position={[
-              isMobile ? 0.5 : (index % 2 === 0 ? 10 : -10), 
+              isMobile ? 0.5 : (index % 2 === 0 ? 5 : -5), 
               -index * 6.5 + 5, 
               isMobile ? -25 : -10 - index * 5
             ]}

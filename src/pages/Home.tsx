@@ -1,5 +1,5 @@
 import React from "react";
-import { ExperienceTimeline, Hero, ProjectGrid } from "../components/organisms";
+import { ContactSection, ExperienceTimeline, Hero, ProjectGrid } from "../components/organisms";
 import { Typography } from '../components/atoms';
 
 const Home: React.FC = () => {
@@ -24,6 +24,11 @@ const Home: React.FC = () => {
                     Work Experience
                 </Typography>
                 <ExperienceTimeline />
+            </section>
+
+            {/* Contact Section */}
+            <section id="contact" className="py-10">
+                <ContactSection />
             </section>
         </>
     )

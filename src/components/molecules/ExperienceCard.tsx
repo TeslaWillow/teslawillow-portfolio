@@ -36,7 +36,7 @@ const ExperienceCard: React.FC<ExperienceProps> = ({ company, role, period, desc
 
                     <div className="flex flex-wrap gap-2">
                         {skills.map(skill => (
-                            <span key={skill} className="text-[9px] px-2 py-1 rounded bg-white/5 border border-white/10 text-gray-400">
+                            <span key={skill} className="text-[9px] px-2 py-1 rounded bg-white/1 border border-white/10 text-white">
                                 {skill}
                             </span>
                         ))}
