@@ -1,13 +1,21 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import './index.css';
-import MainLayout from './components/templates/MainLayout';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { BrowserRouter, Routes, Route } from "react-router";
+
+import './index.css';
+
+import MainLayout from './components/templates/MainLayout';
 import { Home, Page404, ProjectDetails } from './pages';
 import ScrollToTop from './components/utils/ScrollToTop';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+
+    {/* Vercel Speed Insights */}
+    <SpeedInsights />
+
+    {/* Main Router */}
     <BrowserRouter>
       {/* Scroll To Top Util */}
       <ScrollToTop />
@@ -22,5 +30,6 @@ createRoot(document.getElementById('root')!).render(
         </Routes>
       </MainLayout>
     </BrowserRouter>
-  </StrictMode>,
+
+  </StrictMode>
 )
