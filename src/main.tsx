@@ -1,6 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { SpeedInsights } from "@vercel/speed-insights/react"
+import { SpeedInsights } from "@vercel/speed-insights/react";
+import { Analytics } from "@vercel/analytics/react";
 import { BrowserRouter, Routes, Route } from "react-router";
 
 import './index.css';
@@ -14,6 +15,9 @@ createRoot(document.getElementById('root')!).render(
 
     {/* Vercel Speed Insights */}
     <SpeedInsights />
+
+    {/* Vercel Analytics */}
+    <Analytics />
 
     {/* Main Router */}
     <BrowserRouter>
