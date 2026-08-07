@@ -1,5 +1,41 @@
 [
   {
+    "id": 10,
+    "title": "Silenzyo",
+    "description": "Sports betting platform, creating a new interface and improving the user experience.",
+    "longDescription": "Engineered and modularized highly scalable UI component architectures using React.js and TypeScript for Silenzyo.com, significantly improving reusability and reducing development overhead for new features.",
+    "imageUrl": "/assets/images/spicy_rocket/hero_section.webp",
+    "images": [
+      "/assets/images/spicy_rocket/hero_section.webp",
+      "/assets/images/spicy_rocket/second_section.webp",
+      "/assets/images/spicy_rocket/register.webp"
+    ],
+    "imagesMobile": [
+      "/assets/images/spicy_rocket/mobile_hero_section.webp",
+      "/assets/images/spicy_rocket/mobile_second_section.webp",
+      "/assets/images/spicy_rocket/mobile_register.webp"
+    ],
+    "externalLink": "https://silenzyo.com/",
+    "externalLinkText": null,
+    "tags": [
+      "React.js",
+      "Typescript",
+      "Tanstack Query",
+      "TailwindCSS",
+      "Figma",
+      "Docker",
+      "Vite",
+      "GIT",
+      "HTML",
+      "CSS"
+    ],
+    "challenge": {
+      "title": "The Challenge: GDPR Compliance",
+      "description": "The most difficult part was adapting to different regulations and legal requirements for gambling platforms.",
+      "solution": "GDPR Compliance, Anti-Fraud Systems & +18 policy."
+    }
+  },
+  {
     "id": 1,
     "title": "Sube Landing Page",
     "description": "A modern landing page for a Sube Latinoamerica. An international fintech and E-commerce company.",

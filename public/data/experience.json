@@ -1,12 +1,28 @@
 [
   {
-    "id": 1,
+    "id": 4,
+    "company": "Spicy Rocket / silenzyo.com",
+    "role": "Senior Frontend Developer (Contract)",
+    "period": "4 months (2026)",
+    "description": "Worked on a sports betting platform, creating a new interface and improving the user experience.",
+    "skills": [
+      "Sports Betting"
+    ],
+    "geometry": "pyramid",
+    "geometryColor": "#F97316"
+  },
+  {
+    "id": 3,
     "company": "Sube Latinoamerica",
     "role": "Senior Web Developer",
     "period": "2021 - 2025",
     "description": "Led the development of multi-country invoicing systems using Laravel and Angular. Achieved 30% faster processing and improved user experience across platforms.",
-    "skills": ["Fintech", "E-Commerce", "Education"],
-    "geometry": "torus" ,
+    "skills": [
+      "Fintech",
+      "E-Commerce",
+      "Education"
+    ],
+    "geometry": "torus",
     "geometryColor": "#4DE8DE"
   },
   {
@@ -15,17 +31,22 @@
     "role": "Software Intern",
     "period": "2020 - 2021",
     "description": "Developed internal academic modules and improved stakeholder communication.",
-    "skills": ["Education"],
+    "skills": [
+      "Education"
+    ],
     "geometry": "icosahedron",
     "geometryColor": "#0087FF"
   },
   {
-    "id": 3,
+    "id": 1,
     "company": "Freelance",
     "role": "Full Stack Developer",
     "period": "2019 - PRESENT",
     "description": "Built custom web applications for local businesses, enhancing their online presence and operational efficiency.",
-    "skills": ["Web Development", "E-Commerce"],
+    "skills": [
+      "Web Development",
+      "E-Commerce"
+    ],
     "geometry": "knot",
     "geometryColor": "#FF00F8"
   }
